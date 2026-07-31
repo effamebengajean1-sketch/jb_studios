@@ -1,0 +1,58 @@
+export const portfolioProjects = [
+  {
+    slug: 'mariage',
+    title: 'Mariage',
+    description: "Capturer l'émotion et la beauté du plus beau jour. Photo, Vidéo, Drone, Live, Montage + Album. Des souvenirs intemporels à revivre en famille pendant des années.",
+    tags: ['#Mariage', '#Amour', '#JBStudio'],
+    folder: 'mariage',
+  },
+  {
+    slug: 'deuil',
+    title: 'Deuil',
+    description: "Rendre hommage avec respect et dignité. Couverture discrète, photo souvenir, montage hommage. Immortaliser la mémoire et soutenir la famille dans ce moment.",
+    tags: ['#Hommage', '#Respect', '#JBStudio'],
+    folder: 'CEREMONIE-FUNEBRE',
+  },
+  {
+    slug: 'communion',
+    title: 'Communion',
+    description: "Célébrer un moment sacré et spirituel. Photo de groupe, vidéo de la cérémonie, montage souvenir. Des images pieuses à garder toute une vie.",
+    tags: ['#Communion', '#Foi', '#JBStudio'],
+    folder: 'BAPTEME',
+  },
+  {
+    slug: 'adoration',
+    title: 'Soirée d\'Adoration',
+    description: "Capturer la présence, la louange et l'onction. Multicam, son propre, captation live + after-movie. Revivre la puissance du culte et toucher ceux qui n'étaient pas là.",
+    tags: ['#Adoration', '#Louange', '#JBStudio'],
+    folder: 'CEROMONIE_RDO',
+  },
+  {
+    slug: 'anniversaire',
+    title: 'Anniversaire',
+    description: "Mettre de la joie et des souvenirs dans chaque bougie soufflée. Photo, vidéo, interview invités, teaser 1min pour réseaux. Une fête qu'on n'oublie pas.",
+    tags: ['#Anniversaire', '#Fête', '#JBStudio'],
+    folder: 'ANNIVERSAIRE',
+  },
+  {
+    slug: 'documentaire',
+    title: 'Documentaire',
+    description: "Raconter des histoires vraies qui impactent. Écriture, tournage, interviews, montage narratif. Un film qui informe, émeut et marque.",
+    tags: ['#Documentaire', '#Storytelling', '#JBStudio'],
+    folder: 'CORPORATE',
+  },
+  {
+    slug: 'publicite',
+    title: 'Spot Publicitaire',
+    description: "Vendre une marque en 30 secondes. Concept, tournage, motion design, voix-off. Un spot pro qui attire des clients et donne envie.",
+    tags: ['#Publicité', '#Marketing', '#JBStudio'],
+    folder: 'publicite',
+  },
+  {
+    slug: 'teaser',
+    title: 'Teaser',
+    description: "Créer le buzz avant un grand événement. Script court, tournage dynamique, montage rythmé. Donner envie de voir la suite et remplir la salle.",
+    tags: ['#Teaser', '#Promo', '#JBStudio'],
+    folder: 'CONFERENCE',
+  },
+] as const
