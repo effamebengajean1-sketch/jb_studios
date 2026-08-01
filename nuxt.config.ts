@@ -3,6 +3,14 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   srcDir: '.',
 
+  app: {
+    head: {
+      link: [
+        { rel: 'icon', type: 'image/jpeg', href: '/images/logo/logo.jpeg' }
+      ]
+    }
+  },
+
   components: [
     { path: '~/components/ui', pathPrefix: false },
     { path: '~/components/layout', pathPrefix: false },
