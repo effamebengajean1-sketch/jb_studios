@@ -3,8 +3,8 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "prebuild": "node scripts/generate-portfolio-data.cjs",
-    "predev": "node scripts/generate-portfolio-data.cjs",
+    "prebuild": "node scripts/generate-portfolio-data.cjs && node scripts/generate-gallery-photos-data.cjs && node scripts/generate-gallery-videos-data.cjs",
+    "predev": "node scripts/generate-portfolio-data.cjs && node scripts/generate-gallery-photos-data.cjs && node scripts/generate-gallery-videos-data.cjs",
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
