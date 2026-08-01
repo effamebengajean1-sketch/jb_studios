@@ -7,7 +7,16 @@
       :class="{ 'col-span-2 row-span-2': image.id % 5 === 0, 'col-span-1 row-span-1': image.id % 5 !== 0 }"
       @click="$emit('image-click', image)"
     >
-      <NuxtImg :src="image.src" :alt="image.alt" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0" />
+      <NuxtImg
+        :src="image.src"
+        :alt="image.alt"
+        class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0"
+        width="600"
+        height="600"
+        quality="70"
+        sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+        loading="lazy"
+      />
       <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
         <div class="absolute bottom-4 left-4 right-4">
           <span class="inline-block px-3 py-1 text-[10px] font-label-caps tracking-widest bg-brand-red text-white rounded">{{ image.category }}</span>
@@ -21,7 +30,6 @@
     </div>
   </div>
 </template>
-
 <script setup lang="ts">
 import type { GalleryImage } from '~/composables/useGallery'
 defineProps<{ images: GalleryImage[] }>()
