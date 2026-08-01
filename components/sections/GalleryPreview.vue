@@ -46,6 +46,10 @@
           :src="image.src"
           :alt="image.alt"
           loading="lazy"
+          width="500"
+          height="500"
+          quality="72"
+          sizes="(max-width: 768px) 50vw, 25vw"
           class="w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-105 group-hover:brightness-110 will-change-transform"
         />
         <!-- Overlay sombre -->
