@@ -3,6 +3,8 @@
   "type": "module",
   "private": true,
   "scripts": {
+    "prebuild": "node scripts/generate-portfolio-data.cjs",
+    "predev": "node scripts/generate-portfolio-data.cjs",
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
