@@ -19,12 +19,8 @@ export const useGalleryApi = () => {
   const { data, pending, error, refresh } = useAsyncData<GalleryData>(
     'gallery-photos',
     async () => {
-      // Ajouter un timestamp pour éviter le cache
-      const response = await $fetch(`/api/gallery-photos?t=${Date.now()}`)
-      return response
-    },
-    {
-      watch: [() => Date.now()],
+      const response = await $fetch('/data/gallery-photos.json')
+      return response as GalleryData
     }
   )
 
