@@ -26,6 +26,10 @@
             :alt="currentImage?.alt"
             class="object-contain transition-all duration-500 cursor-pointer select-none"
             :class="isZoomed ? 'max-w-[95vw] max-h-[95vh] scale-[1.5]' : 'max-w-full max-h-[85vh] scale-100'"
+            width="1600"
+            height="1200"
+            quality="85"
+            sizes="95vw"
           />
 
           <!-- Zoom hint -->
@@ -49,7 +53,6 @@
           @click="close"
           aria-label="Fermer"
         >
-          <!-- ✅ Correction : material-symbols:close → mdi:close -->
           <Icon name="mdi:close" class="text-2xl" />
         </button>
 
@@ -60,7 +63,6 @@
           @click="downloadImage"
           aria-label="Télécharger l'image"
         >
-          <!-- ✅ Correction : material-symbols:download → mdi:download -->
           <Icon name="mdi:download" class="text-2xl" />
         </button>
 
