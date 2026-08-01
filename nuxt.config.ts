@@ -2,7 +2,6 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   srcDir: '.',
-
   app: {
     head: {
       link: [
@@ -10,7 +9,6 @@ export default defineNuxtConfig({
       ]
     }
   },
-
   components: [
     { path: '~/components/ui', pathPrefix: false },
     { path: '~/components/layout', pathPrefix: false },
@@ -19,7 +17,6 @@ export default defineNuxtConfig({
     { path: '~/components/forms', pathPrefix: false },
     { path: '~/components/integrations', pathPrefix: false },
   ],
-
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxtjs/google-fonts',
@@ -28,9 +25,7 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@nuxt/content',
   ],
-
   css: ['~/assets/css/main.css'],
-
   googleFonts: {
     families: {
       // Polices principales
@@ -42,7 +37,6 @@ export default defineNuxtConfig({
     },
     display: 'swap'
   },
-
   runtimeConfig: {
     resendApiKey: process.env.RESEND_API_KEY,
     recaptchaSecret: process.env.RECAPTCHA_SECRET,
@@ -52,23 +46,20 @@ export default defineNuxtConfig({
       recaptchaSiteKey: process.env.NUXT_PUBLIC_RECAPTCHA_SITE_KEY,
     }
   },
-
   nitro: {
     preset: 'vercel'
   },
-
   typescript: {
     strict: true
   },
-
   image: {
-    provider: 'none'
+    provider: 'vercel',
+    quality: 75,
+    format: ['webp']
   },
-
   plugins: [
     { src: '~/plugins/gsap.client.ts', mode: 'client' }
   ],
-
   content: {
     markdown: {
       toc: {
