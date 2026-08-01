@@ -29,10 +29,9 @@ export const usePortfolioApi = () => {
   const { data, pending, error, refresh } = useAsyncData<PortfolioData>(
     'portfolio',
     async () => {
-      const response = await $fetch('/api/portfolio')
-      return response
-    },
-    {}
+      const response = await $fetch('/data/portfolio.json')
+      return response as PortfolioData
+    }
   )
 
   return {
