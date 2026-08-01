@@ -1,3 +1,4 @@
+// composables/useGalleryVideosApi.ts
 export interface VideoItem {
   id: string
   title: string
@@ -19,11 +20,8 @@ export const useGalleryVideosApi = () => {
   const { data, pending, error, refresh } = useAsyncData<GalleryVideosData>(
     'gallery-videos',
     async () => {
-      const response = await $fetch('/api/gallery-videos')
-      return response
-    },
-    {
-      watch: [() => Date.now()],
+      const response = await $fetch('/data/gallery-videos.json')
+      return response as GalleryVideosData
     }
   )
 
