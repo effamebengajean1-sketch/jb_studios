@@ -120,7 +120,9 @@ const encodedMessage = computed(() => {
 
 const openWhatsapp = () => {
   if (import.meta.client && props.phone) {
-    window.open(`https://wa.me/${props.phone}?text=${encodedMessage.value}`, '_blank')
+    // Nettoie le numéro : retire le "+", les espaces, tirets, etc. — ne garde que les chiffres
+    const cleanPhone = props.phone.replace(/[^0-9]/g, '')
+    window.open(`https://wa.me/${cleanPhone}?text=${encodedMessage.value}`, '_blank')
   }
 }
 </script>
