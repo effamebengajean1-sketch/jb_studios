@@ -20,6 +20,9 @@
         priority
         sizes="100vw"
         format="webp"
+        width="1920"
+        height="1080"
+        quality="80"
       />
     </div>
 
